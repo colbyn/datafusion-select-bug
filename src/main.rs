@@ -14,7 +14,9 @@ pub async fn read(file_path: impl AsRef<Path>) -> datafusion::error::Result<()> 
     ctx.register_csv("my_table", file_path, options).await.unwrap();
     // CREATE A PLAN TO RUN A SQL QUERY
     let data_frame = ctx
-        .sql("SELECT id FROM my_table")
+        // .sql("SELECT id FROM my_table")
+        // .sql("SELECT * FROM my_table")
+        .sql("SELECT value FROM my_table")
         .await
         .unwrap();
     // PRINT

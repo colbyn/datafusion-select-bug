@@ -16,11 +16,6 @@ pub async fn read(file_path: impl AsRef<Path>) -> datafusion::error::Result<()> 
     let data_frame = ctx
         .sql("SELECT value FROM my_table")
         .await
-        .unwrap()
-        .with_param_values(vec![
-            // ScalarValue::Utf8(Some(String::from("todo"))),
-            ScalarValue::Utf8(Some(String::from("águila"))),
-        ])
         .unwrap();
     // PRINT
     data_frame.show().await.unwrap();

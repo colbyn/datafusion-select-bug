@@ -1,3 +1,5 @@
+Related discussion: https://github.com/apache/arrow-datafusion/discussions/9095
+
 ```shell
 $ cargo run
    Compiling datafusion-select-bug v0.1.0 (/Users/colbyn/Developer/Temporary/datafusion-select-bug)
